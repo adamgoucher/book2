@@ -1,0 +1,16 @@
+Return on Investment
+
+Most people will agree that automation is, generally speaking, a good idea. But just like tasks that take time 'away' from other things there is often a 'What is our ROI from this activity?' battle to be fought. And just like TDD before it, there is no easy way to quantify it. Well, initially at any rate.
+
+The best way to think about the ROI of automation is not in terms of something measured in units of money, but units of time.
+
+To understand this, recall why we do automation in the first place. Computers are excellent at performing tasks in the same manner with great speed and repeatability. We use this to our advantage in automation by having them periodically execute a script (or series of scripts) to save us, the humans, time. This time savings allow us to do higher-value, manual exploratory testing.
+
+This is a hard position to sell to people who are signing off on tooling budgets and are looking for a expenditure justifications. So here is formula to help satisfy their needs.
+
+Return on Investment = ((Average Tester Hourly cost * Hours manual testing allowed through automation ) - cost of automation) / cost of automation
+
+This is an extremely simplistic way of doing the calculation, but part of its beauty is in its simplicity in expressing the importance of testing time released by automation. And by what is not included in it. Specifically, the absence of 'number of bugs found' which at best is a misleading metric but one that commonly found in automation roi calculations. 
+
+Focusing the calculation on anything but the time freed up for manual testing is missing the true purpose entirely and one that will misrepresent the true return on investment for the automation effort.
+

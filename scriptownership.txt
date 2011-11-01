@@ -1,0 +1,13 @@
+Script Ownership
+
+The question of who 'owns' the automation project and scripts is one that comes up in almost every implementation. The ideal answer is 'whomever makes the most sense for your organization' but the hard reality is the answer is everyone/no one and it depends.
+
+For long term success, I strongly feel that organizations that focus more on the product they are developing will have greater success in automation than ones that are concerned first about their 'department' and fiefdoms first. In teams where there is no 'I' and only 'the product' it becomes quite simple to say that everyone in the team should feel like they 'own' the automation. If someone identifies a place that could use automation, then they should feel comfortable adding it in. The same applies for removing old or redundant scripts. Having to file a change request or request time in the schedule for a change is counter productive and is a sign of organizational disfunction.
+
+That's well and good for dealing with things on the macro level, but what about at the micro level? Who is in charge of framework decisions and changes? Hopefully it is the person who is both suited for it and wants it. But whose 'team' do they live in? Development or Test? Or even Operations? Ignoring further fiefdom discussion, different teams make more sense for different types of automation.
+
+Development -> Unit
+Test -> Functional, Assistant
+Operations -> Build, Deployment
+
+So you see, the answer really is 'it depends'. Identifying the internal automation champion, automation goals, and skill sets of available scripters with go a long way in figuring out who should 'own' the scripts in your organization. Don't make the mistake of assuming that the 'Test' team is who should own the functional automation just because it traditionally always has.

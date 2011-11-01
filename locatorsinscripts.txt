@@ -1,0 +1,29 @@
+Object Locators don't belong in scripts
+
+All automation frameworks have some means to identifying the objects it needs to interact with. For simplicity sake, let's call them Locators. Most scripts start (and some stop as well) being record through some sort of tool and will have the locators embedded right in the script.
+
+selenium.click("NextPageButton")
+
+This is great from a can-I-see-everything-in-one-place perspective. Especially if the locators that get recorded have some sort of human meaning (like the one above). Too often though you end up with something like
+
+selenium.click("//form[@name='navigation']//submit[endswith(@value, '2')]")
+
+which is is the very opposite of having human meaning. In fact it is down right distracting and makes reading the code difficult.
+
+A large part of the readability can be restored by moving the locator somewhere else and referring to it by a different, more friendly, name.
+
+locators = {}
+locators["NextPageButton"] = "//form[@name='navigation']//submit[endswith(@value, '2')]"
+
+selenium.click(locators["NextPageButton"])
+
+This still has all the information from before, but has greatly increased readability since the click is clearly associated with a good named variable; not some long calculated literal locator sting.
+
+But this still adds a significant amount of clutter into scripts as they will always have this block of locator loading at the beginning. We want locators right out of the script entirely. To do this, we load our locator object from an external file.
+
+locators = load_locators()
+selenium.click(locators["NextPageButton"])
+
+Now we have the locator out of our current script entirely and we also have another valuable side effect. And that is to share locators across scripts though the reuse of a single locator file. This way, when a locator changes (when, not if), the fix is propagated through the automation by changing one file in one place.
+
+Of course, if you are using Page Objects there is an argument to be made for having a page's locators right in the class since a locator should by definition be only on that page representation. If it needs to be on more than one then it is likely a smell that your abstraction has problems.

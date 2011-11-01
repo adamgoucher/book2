@@ -1,0 +1,29 @@
+Input and Output Formats Matter
+
+It is often not long into an automation projects when a discussion happens around getting data into or out of the framework. Though they are really two separate questions, part of the answer is the same.
+
+Compare these two images; what is the same? And what is different?
+
+TODO: CSV input table
+
+TODO: XLS input table
+
+Same:
+- layout
+- content
+
+Different:
+- styling
+- CSV is a text format, XLS is a binary format
+
+The second difference is often the biggest hurdle to successful tracking of input data in a project. A text format is one that if you took the stored representation of your document and opened it in something like notepad you would be able to read it (it may not be pretty, but you would be able to read) whereas a binary format requires a custom reader (like Excel).
+
+Whenever possible you want to use a text format over a binary one when doing automation. Why? Because you can compare (external to the reader) the differences between versions is the big reason, but integrating your automation with version control is also made substantially more user friendly as well. When a version control system encounters a conflict when committing a change, it cannot tell where the conflict exists other than you are attempting to commit something that someone else updated. With a text format it will tell you not only whether a commit actually exists but where and what it is as well.
+
+The solution in most cases where a binary format (Excel) has been made, it can be replaced by CSV without much hardship. Usually the only thing that is sacrificed is the colouring of header rows etc. but those don't really need to be there for the automation to function -- and that is the primary purpose of this file.
+
+Another thing that is lost in the XLS to CSV switch are calls to built-in functions which is actually a hidden benefit. While use of random data is valuable (and important), that randomness should be embedded in the system not in input files. Those should be static.
+
+A further benefit of CSV is that it is both cross-platform and supporting it costs nothing. Sure, you can have the SME edit the CSV on their Windows based PC using Excel (the .csv extension is mapped to Excel by default) but the saved file can be run on Windows, Mac or Unix.
+
+Reporting is a topic entirely on its own, but producing text output rather than binary is important for all the same reasons as well.

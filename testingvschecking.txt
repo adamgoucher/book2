@@ -1,0 +1,26 @@
+Testing versus Checking
+
+It is said that the first car race happened the first time two cars encountered each other on the road. The contest between automated and manual testing hasn't been going on for nearly as long. But it is close. And it so happens that the result is a draw since they were actually running different races than the other.
+
+The problem was that neither the participants nor spectators were really aware of it. They cheered for their favourite and hoped it won in a very partisan manner. The identification of the different races that were being fought was given a name by Michael Bolton at the Agile 2009 conference. The races could be categorized as either Testing or Checking.
+
+According to Michael, Testing is 'a process of exploration, discovery, investigation, and learning' whereas Checking is 'a process of confirmation, verification, and validation.' Or put differently, Testing is 'brain on' and Checking is 'brain off' and since computers excel at 'brain off' work they can be employed to do Checking.
+
+This level of specificity in terminology has a major impact on the field of Automated Testing since it actually makes the term an oxymoron. When we create scripts to run through an application  what we are doing is Automated Checking.
+
+But the script tells me if the application is working properly which is what I learn when doing the test manually, so it must be a Test! Except that the script, even the most sophisticated model-driven one, is not exploring, discovering, investigating or learning. It is merely executing against a model that someone created for it. Which brings us to an interesting aspect of automation.
+
+Automated checks always begin as manual tests and often result in testing after execution.
+
+Let's look at at simplistic script creation workflow for illustration.
+- At some point someone needed to have an idea to explore in their product (brain on, test)
+- That idea is validated against the system (brain on, test)
+- The idea is transposed in some manner to an executable format (brain on, test)
+- The script is executed (brain off, check)
+- The results are interpreted (brain on, test)
+
+Notice how only the execution of the idea is only a Check. Everything else, including the creation of the script is Testing. In fact, the exploration, discovery, investigation, and learning that the scripter undertakes during this process is actually one of the major reasons to create automation in the first place.
+
+This distinction between a Test and a Check is central to any modern discussion on automation. This book is therefore about creating Automation Scripts to execute Checks and facilitate Testing.
+
+[1] http://www.developsense.com/blog/category/testing-vs-checking/

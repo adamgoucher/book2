@@ -1,0 +1,25 @@
+If
+
+For just two letters, 'if' can wreck an impressive amount of havoc on your automation. And ironically, its presence in the script was likely intentional in order to save time; but rarely does it do so in the long run. The peril of if id nicely shows in this snippet
+
+selenium.click("submit")
+seleniun.waitForPageToLoad("30000")
+if selenium.getText("errorStatus") == "Locked out":
+   assertTrue(selenium.getText("errorMessage"), "Account is locked")
+elif selenium.getText("errorStatus") == "Invalid":
+   assertTrue(selenium.getText("errorMessage"), "Username is invalid")
+else:
+   assertTrue(selenium.getText("errorMessage"), "Wrong password or email")
+
+It is a standard script to check the logging in of a user and has some logic around invalid logins. The problem is the 'if' statements though. In effect, what this is is three different scripts merged into one probably to avoid duplication of shared code. This is a problem because it is entirely dependent on the input that is provided and perhaps data that wouldn't trigger one of the runs would never be provided making the hole exercise rather pointless.
+
+To refactor this test, you should
+- create three different tests
+- make use of xUnit style setup/teardown methods to gain code reuse
+- have specific triggering data for each test method
+
+TODO - refactored code
+
+The big benefit of the refactored script is visibility. The intent of each test is specific and not deterministic based upon in the input.
+
+One situation where 'if' is not only desirable, but critical is when constructing model based automation which needs to make decisions on its own (in relation to the model) about how to traverse the application. Aside from that though, keep the 'if' statements out of test methods.

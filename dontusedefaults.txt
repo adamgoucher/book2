@@ -1,0 +1,38 @@
+Don't use what you are given
+
+An anti-pattern that seems good when you start an automation project but reveals itself once you get well down the road is to use main objects your framework provides directly. Those models and abstractions made sense to the framework team at the time they were created, but they were not likely aware of your unique circumstances.
+
+Here is a part of an NUnit script
+
+[TestFixture]
+public class AccountTest
+{
+
+  private ISelenium selenium;
+  private StringBuilder verificationErrors;
+  
+  [SetUp]
+  public void SetupTest() 
+  {
+    selenium = new DefaultSelenium("localhost", 4444, "*firefox", "http://localhost");
+    selenium.Start();
+    verificationErrors = new StringBuilder();
+  }
+    
+Everything looks nice, and it could be from any number of tutorials, except it has at least one problem. The selenium object is created by the DefaultSelenium class that comes with the distribution. While convenient now, when you need to add new methods to it to accommodate user-extensions it will quickly show its limitations forcing you to modify all your existing scripts.
+
+It is a good idea to create a layer between what your framework provides and what the scripts implement at the beginning of the project to prevent this necessary rework later.
+
+public class CustomSelenium : DefaultSelenium
+{
+  public CustomSelenium(string serverHost, int serverPort, string browserString, string browserUrl)
+    : base(serverHost, serverPort, browserString, browserUrl)
+    {
+    }
+}
+
+With this layer in place the selenium instantiation like becomes
+
+selenium = new CustomSelenium("localhost", 4444, "*firefox", "http://localhost");
+
+which gives us greater control over the host the objects behave. But don't limit your thinking to just third-party libraries in your automation framework. What about the framework itself. Does it provide a TestCase class to inherit from (like PyUnit does)? If so, that is also a prime candidate for abstraction as well.

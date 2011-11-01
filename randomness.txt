@@ -1,0 +1,19 @@
+Randomness
+
+When creating automation scripts, there are three types of randomness that can (and should) be employed: input, order and path. All three are equally important, but path-based randomness is a big topic on its own so won't be discussed here, but both input and order are.
+
+Input randomness is one of the major reasons for creating automation. There are actually two variants of this input randomization. The first is programatic where you construct code that produces values that adheres to certain rules. This is at its most useful when interacting with text input fields. The application really doesn't care what you put in the fields just as long as it meets the required rules. Most would agree that 'Adam' is a valid first name. But so is 'Xj3rdk'. And 'dl2-f.'. Too often when people are doing manual testing they use test data that is representative of the type of data it is. Real first names for example. This has the risk of running into the Pesticide Paradox though.
+
+The Pesticide Paradox was first named by Boris Beizer [1] and states that a system will learn how to pass the tests that are routinely used against it. This is best illustrated with an example. Imagine you are a farmer and control the pests on your crops using a particular chemical just as your father did. And his father. And his father. Only now you have to use more pesticide each year for the same result and soon will likely miss more of the critters than it catches. Static test data is that chemical and the field is your application. The solution is of course to change chemical - or test data. Since automation is code we can create a function that generates a new chemical on every run. And we should.
+
+TODO: example
+
+The other form of input randomness is reactive. Reactive randomness is where you don't code random generation of data, but how to interact with a specific types of controls. For example, if you had a registration form with a series of checkboxes, the script would randomly select one, none or some of them.
+
+TODO: example
+
+Order randomization is also important to introduce into your automation. Recall the Pesticide Paradox; if you are executing the scripts in a specific order every time then you are likely setting yourself to get overrun by locusts.
+
+There are (at least) two side effects of running scripts in a scrambled order. First, it makes sure that they are not dependent on each other for successful execution or at the very least quickly identifies where the linkages exist. The second reason is that having scripts that can be run in any order is one of the first steps to being able to run scripts in parallel and in a distributed manner.
+
+[1] - find reference

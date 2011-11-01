@@ -1,0 +1,30 @@
+The Importance of Lightsabers
+
+The lightsaber is likely the most memorable image from the Star Wars series. It is an important symbol of both the Jedi and the Sith and ends up being an important symbol for successful automation as well.
+
+Lightsabers are, at a very simplistic level, just an energy source that is directed through some crystals. As such they could be manufactured in a factory like anything else, but instead they were constructed by hand by the individual who sought one. Why? Because no person is the same, and they work best when tailored to and for the person who would use it. And since the lightsaber is not only ceremonial but could save their life (or others') so it was extremely important that the owner understand its inner workings.
+
+Your relationship with your automation is the same -- you need to understand its inner workings because when something goes wrong at 3AM Sunday night you need to be able to fix it.
+
+But what do I mean by 'Understand'? A simple test of this is whether you can draw a flow diagram of a single script through the automation. As an example, look at this simple Selenium script.
+
+TODO: code
+
+That script does the the following.
+- load the selenium-client gem
+- execute the before method
+- create a selenium object
+- contact the Se-RC server
+- the server then starts a browser
+- execute the test method
+- which opens the page
+- asserts the title
+- and then browser is close in the after method
+
+But I wouldn't consider this really understanding what is going on. This is general knowledge that is available on the front of the Selenium webpage. What you want to know is /how/ the browser is started. How does it locate it? What flags does it set? How can you tune them? Once you have that level of detail in your head, then you really understand.
+
+What this does not mean though is that you need to know every nook and cranny of the framework(s) you are using andy more than the young Jedi crafting her first lightsaber [likely] needed to understand power unit circuitry.
+
+How does one achieve this understanding? To extend the Star Wars theme a little further, the easiest way is to 'Use the Source'. Understanding is certainly easier when you have the source code for the automation tool/framework in front of you. Without it you will be stuck with whatever level of understanding the automation vendor deems you should have.
+
+Barring access to the source code, another tact is to create layers of abstraction between your code and the vendor code to increase the footprint of your understanding and isolate that which you don't.

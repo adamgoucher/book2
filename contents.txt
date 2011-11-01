@@ -1,0 +1,34 @@
+Lessons
+01 - Testing vs Checking - done
+02 - Lightsabers and Open Source - done
+03 - Deep / Shallow - done
+05 - ROI - done
+06 - Exploratory Automation
+07 - xUnit
+08 - Page Objects
+09 - If - done
+10 - And
+11 - Continuous Integration
+12 - Continuous Deployment
+13 - Script Ownership - done
+14 - Don't use defaults - done
+15 - Avoid Locators in Scripts - done
+16 - Randomness - done
+17 - Build Your Own
+18 - Myth of Language
+19 - Layering
+20 - Comments
+21 - Reporting
+22 - Magic is Not Good - done
+23 - Don't Invent what you can Buy
+24 - Choosing a Language
+25 - Know your Audience
+26 - Synchronization
+27 - Design for Parallel
+29 - Text vs. Binary - done
+30 - Mission
+31 - Data-driven
+32 - Model-driven
+33 - ATDD
+34 - There is no 'one' tool
+35 - Trust

@@ -1,0 +1,28 @@
+Deprecation
+
+Automation code is real code. One side effect of this is that it is constantly evolving, growing an extra arm here, another leg over there and a third eyeball somewhere else. The solution to this reality is not to prevent it from happening since it is actually healthy, but to manage it so that when the new limb arrives there is a plan to remove the one it is replacing.
+
+Of course you cannot, or at least should not if you don't want a slew of script failures, just summarily chop the old code out of your codebase. Instead you want to mark it being replaced by something else. In programming terminology this is called 'deprecating'.
+
+As usual, different languages have somewhat different ways to indicate deprecation but the general pattern is you annotate the code with a message indicating not only that the code is deprecated but what replaced it. Here it is in Java.
+
+public class Checkout extends Page {
+  ...
+  /**
+   * @deprecated  replaced by {@link #resetCart(int session)}
+   */
+  @Deprecated
+  public final void resetCart() {
+    ...
+  }
+}
+
+Notice that is deprecated in two different places; at the code and in the associated docstring. Both are equally important.
+
+The effect of this deprecation is that code will continue to execute against the old implementation but will produce a log message warning that you are using something marked as deprecated. These languages are a smell warning of rot in your codebase and they should be addressed as soon as possible. 
+
+Sidebar - Not only for your automation code but if your production code as well -- grepping the production logs for 'epricate' can be revealing. Making use of deprecated code limits your ability to upgrade libraries without unexpected support surprises. Especially if the reason for an upgrade is due to a security vulnerability being introduced. You could even configure your log monitoring systems to pay attention to these warnings.
+
+Perhaps the most important part of deprecating code is actually removing the code from the codebase after some length of grace period. If you don't actually go through the exercise of removing the code then you might have just not marked it as deprecated in the first place.
+
+Task - Spend 1 hour going through your automation support code (page objects, helpers, wrappers) and mark anything that has been replaced by something better as deprecated. And then get rid of all the warnings.

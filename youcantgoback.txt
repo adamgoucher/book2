@@ -1,0 +1,18 @@
+You Can't Go Back
+
+Very rarely in a career do you get to start a project completely from scratch. Which means you are usually coming in after the groundwork for the project has already been established. Sometimes it is relatively new and still pretty malleable, but sometimes it has had time to congeal is into a solid lump.
+
+So what do you do when introducing an automation architectural change like using Page Objects or changing APIs? One thing you can't do is port the change back to the existing stuff. It seems like a good idea, but the reality is you can't go back.
+
+Well, there is no fundamental law of the universe preventing you from going back, but if you do you immediately start to accrue Automation Debt since you cannot automate the old and the new simultaneously. What you ant to do is just say 'the old stuff is the way it is, and the new stuff will be different'. And then automate the current stories/features in the new manner.
+
+The easiest way to accomplish this is fork your automation into 'old' and 'new' branches and duplicate the jobs in CI. Now the old stuff will continue to provide information as it always has, and the new stuff will provide new information as it grows more scripts. Only when a script needs repair or modification does it graduate to the new style of scripting.
+
+Have a stable part of the application? Well, that could mean the 'old' scripts stick around for months, or perhaps years. And that is perfectly ok. The more important thing is keeping your automation debt in check. When you migrate the existing scripts your automation debt is everything that existed before and everything new that you are not automating because you are working on the old stuff. If you acknowledge that you can't go back then your automation debt is only the new stuff -- which you are now automating so the interest on the debut doesn't accrue.
+
+Oh. And of course, where are the bugs that could be discovered by writing the automation most likely hiding? In the new stuff.
+
+
+
+
+

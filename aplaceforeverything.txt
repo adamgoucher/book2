@@ -1,0 +1,20 @@
+A Place For Everything
+
+In any moderately large automation effort there comes a time when you start to have to worry about organizing the various bits that inevitably start to accumulate. For small projects, I wouldn't worry too much about this, and I don't think tackling this before writing a single line of code is necessarily worth the effort. Every project is slightly different and has its own unique structure which is not revealed until you start it. That said, here is an organizational directory structure that scales well.
+
+<ul>
+<li><i>config</i> - Any configuration files that relate to the automation go in here. Generally, the 'defaults' are checked into version control and then tuned for local execution. These modifications are not checked into version control.</li>
+<li><i>logs</i> - Log files can accumulate real fast. It is a good idea to tuck them away in one place.</li>
+<li><i>modules</i>
+  <ul>
+    <li><i>generators</i> - If any input fields can have data generated through an algorithm then they get put here</li>
+    <li><i>page objects</i> - All Page Object definitions go here</li>
+    <li><i>providers</i> - Any access wrappers into CSV files or the application's data store get put here as they provide either data into the application or an oracle interface</li>
+    <li><i>tailored</i> - Hopefully your framework allowed for customization (or tailoring). Those tailorings going in here.
+  </ul></li>
+<li><i>scripts</i> - The actual script files go here. With well named files a single directory scales well, but once you hit the point where you need to scroll to capture the entire listing it is time to start adding a meaningful directory structure in place. Check first though that your Runner can search down directories first though.</li>
+<li><i>suites</i> - This is only needed if you are building statics scripts and not using a dynamic suite generation strategy like tags.</li>
+<li><i>support</i> - CSV files, things that need to be uploaded, etc. go in here. As with scripts, if the number of items grows too large then introduce further specialization using directories</li>
+</ul>
+
+Some of the wording might change slightly to be in sync with language norms and conventions, but the basic ideas remain.

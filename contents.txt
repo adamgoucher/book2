@@ -25,10 +25,14 @@ Lessons
 25 - Know your Audience
 26 - Synchronization
 27 - Design for Parallel
-29 - Text vs. Binary - done
+29 - Text vs Binary - done
 30 - Mission
 31 - Data-driven
 32 - Model-driven
 33 - ATDD
 34 - There is no 'one' tool
 35 - Trust
+
+?? - Deprecation
+?? - Making Your Life Easier
+?? - We don't need...

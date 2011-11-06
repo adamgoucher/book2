@@ -1,0 +1,21 @@
+Results Will Be Ready Next Thursday
+
+Success when creating automation is a double-edged sword. Get really good at it and the number of scripts that need to be executed grows to the point where the timeliness of their information starts to be less useful. There are two main ways to deal with this problem (which in terms of automation is actually one of the better problems to have.)
+
+Divide And Conquer
+
+Before we do anything we need to figure out if we /really/ need to run everything to get value out of the run. Usually not. Using the Deep/Shallow categorization we can immediately create a small group of scripts that can be run on every commit. The remaining ones can be scheduled for execution at some later interval.
+
+The classic schedule used to be 'overnight' but that delays information about a 930 AM commit until the next morning and doesn't take into account today's global development environment. These days, a gap in scheduling of more than 3 hours is pushing it. If however there are parts of application that have been automated but have no current development work on there then once a day or once a week might be an appropriate schedule. The schedule can of course be modified if a bug has been fixed injecting risk into that area of the codebase.
+
+This slicing of your automation is made easier with dynamic suites through tags.
+
+Throw Money at the Problem
+
+Once dividing up the problem into thinner slices starts to no longer return timely information it is time to start throwing money at the problems and exploring parallel execution.
+
+The basic idea here is to run as many scripts /at the same time/ as you can afford. Yes, afford. This is more of a fiscal problem than a technical one. Sure, your scripts will likely need some changes to work in parallel; especially when it comes to database-based oracles but the real limitation lies in having access to hardware resources. And that costs money.
+
+Traditionally, when teams started parallelism they bought a rack (or racks, or racks and racks!) of machines. Not only does this cost a lot of money at the initial investment time, but someone needs to be employed to maintain them. Virtualization and distribution of VMs across host machines has helped a bit, but that still requires someone to manage the environment. With the rise of 'the cloud', a lot of the initial outlay can be avoided in exchange for the fee of your cloud provider. The big advantage is of course that patch levels, hardware replacement, etc. is no longer your problem. Also the cloud resources can be created when needed and destroyed when not.
+
+If you already have an investment in physical hardware, exploring the notion of a 'private cloud' could have merit. Every week it seems there is a new project or tool to bring the benefits of the cloud behind the firewall. A good strategy might be to use your 'private cloud' when it has the capacity available and spill over into the 'public cloud' when it does not.

@@ -1,10 +1,10 @@
 We don't need no stinkin' browser
 
-Just because something could be scripted via a browser, does not mean that it is neither the best idea nor most efficient. Take a Web Service for example. You could do the action in the browser that triggers a call(s) to the service and ensure the result is desired. Actually, that is a good idea, but what if the results were not what you wanted? Was it the code using the service or the service itself? And what about all the error responses the service could return; can you trigger them via the app?
+Just because something could be scripted via a browser, does not mean that it is either the best idea, or the most efficient. Take a Web Service for example. You could do the action in the browser that triggers a call(s) to the service, and ensure the result is as desired. Actually, that is a good idea, but what if the results were not what you wanted? Was it the code using the service that was wrong, or the service itself? And what about all the error responses the service could return; can you trigger them via the app?
 
-When using something like a web service it makes sense to ignore the browse and go directly at the socket with information. There are commercial tools available to help with this, but the most effective way is to just use your language's url fetching library.
+When using something like a web service, it makes sense to ignore the browser and go directly to the socket with information. There are commercial tools available to help with this, but the most effective way is to just use your language's url fetching library.
 
-Sidebar - REST vs. SOAP - There are two broad types of web service; REST and SOAP. REST is the easier of the two to automate as it uses a combination of the HTTP request type and URI as its API. SOAP based webservices tend to have a single URI but it can have many services defined in it which a 'client' can use. And the payload is always an XML 'envelope'; as is the response.
+Sidebar - REST vs. SOAP - There are two broad types of web service; REST and SOAP. REST is the easier of the two to automate as it uses a combination of the HTTP request type and URI as its API. SOAP based webservices tend to have a single URI, but it can have many services defined in it which a 'client' can use. And the payload is always an XML 'envelope'; as is the response.
 
 This is another case where understanding your language's capabilities and the xunit runner you are using has value. In this example the setup method creates a 'client' for the service and the [currently] sole test is that a instance is created when passing in a valid template.
 
@@ -28,14 +28,14 @@ class TestCreateInstance(object):
 
         assert(instance_id != "")
         
-The hardest part about automating the checking of web services like this is getting the first script done. From there, it is just variations of the same thing.
+The hardest part about automating the checking of web services like this is getting the first script done. From there, the others are just variations of the same thing.
 
-Web Services are essentially published contracts of behavior; when I get this input to this place I will give your this response. So to test them it is a matter of verifying claims for both the 'expected input' conditions an 'unexpected input' ones. In this example, the exhaustive list would look something like this.
-- each valid id (or if there is too many, then just a randomly selected valid id)
+Web Services are essentially published contracts of behavior; "When I get this input to this place, I will give you this response". So to test them, it is a matter of verifying claims for both the 'expected input' conditions and 'unexpected input' ones. In this example, the exhaustive list would look something like this:
+- each valid id (or if there are too many, then just a randomly selected valid id)
 - an invalid id (numeric)
 - an invalid id (alpha)
 - missing an id
 - instance id is in the correct format
 - an instance record was created in the database
 
-From an organizational perspective, try to use the 'one service, one class' philosophy. This nicely isolates code so when you need to debug a particular service it is easy to locate. Sometimes however you need to use services A and B before you can use C. That's fine, but they should still be located in C's class since that is the purpose of the script in the first place. If there is value in it, you could also tag each test method with the service calls that are being employed to be able to run every script that is dependent on a particular service.
+From an organizational perspective, try to use the 'one service, one class' philosophy. This nicely isolates code so that when you need to debug a particular service, it is easy to locate. Sometimes however you need to use services A and B before you can use C. That's fine, but they should still be located in C's class since that is the purpose of the script in the first place. If there is value in it, you could also tag each test method with the service calls that are being employed, to be able to run every script that is dependent on a particular service.

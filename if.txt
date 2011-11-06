@@ -1,6 +1,6 @@
 If
 
-For just two letters, 'if' can wreck an impressive amount of havoc on your automation. And ironically, its presence in the script was likely intentional in order to save time; but rarely does it do so in the long run. The peril of if id nicely shows in this snippet
+For just two letters, 'if' can wreck an impressive amount of havoc on your automation. And ironically, its presence in the script was likely intentional in order to save time; but rarely does it do so in the long run. The peril of if is nicely shown in this snippet
 
 selenium.click("submit")
 seleniun.waitForPageToLoad("30000")
@@ -11,7 +11,7 @@ elif selenium.getText("errorStatus") == "Invalid":
 else:
    assertTrue(selenium.getText("errorMessage"), "Wrong password or email")
 
-It is a standard script to check the logging in of a user and has some logic around invalid logins. The problem is the 'if' statements though. In effect, what this is is three different scripts merged into one probably to avoid duplication of shared code. This is a problem because it is entirely dependent on the input that is provided and perhaps data that wouldn't trigger one of the runs would never be provided making the hole exercise rather pointless.
+It is a standard script to check the logging in of a user and has some logic around invalid logins. The problem is the 'if' statements though. In effect, what this is is three different scripts merged into one probably to avoid duplication of shared code. This is a problem because it is entirely dependent on the input that is provided and perhaps data that wouldn't trigger one of the runs would never be provided making the whole exercise rather pointless.
 
 To refactor this test, you should
 - create three different tests

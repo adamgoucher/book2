@@ -1,6 +1,6 @@
 Object Locators don't belong in scripts
 
-All automation frameworks have some means to identifying the objects it needs to interact with. For simplicity sake, let's call them Locators. Most scripts start (and some stop as well) being record through some sort of tool and will have the locators embedded right in the script.
+All automation frameworks have some means to identifying the objects it needs to interact with. For simplicity sake, let's call them Locators. Most scripts start (and some stop as well) being recorded through some sort of tool and will have the locators embedded right in the script.
 
 selenium.click("NextPageButton")
 
@@ -8,7 +8,7 @@ This is great from a can-I-see-everything-in-one-place perspective. Especially i
 
 selenium.click("//form[@name='navigation']//submit[endswith(@value, '2')]")
 
-which is is the very opposite of having human meaning. In fact it is down right distracting and makes reading the code difficult.
+which is the very opposite of having human meaning. In fact it is down right distracting and makes reading the code difficult.
 
 A large part of the readability can be restored by moving the locator somewhere else and referring to it by a different, more friendly, name.
 

@@ -1,8 +1,8 @@
 Deprecation
 
-Automation code is real code. One side effect of this is that it is constantly evolving, growing an extra arm here, another leg over there and a third eyeball somewhere else. The solution to this reality is not to prevent it from happening since it is actually healthy, but to manage it so that when the new limb arrives there is a plan to remove the one it is replacing.
+Automation code is real code. One side effect of this is that it is constantly evolving, growing an extra arm here, another leg over there and a third eyeball somewhere else. The solution to this reality is not to prevent it from happening, since it is actually healthy, but to manage it so that when the new limb arrives there is a plan to remove the one it is replacing.
 
-Of course you cannot, or at least should not if you don't want a slew of script failures, just summarily chop the old code out of your codebase. Instead you want to mark it being replaced by something else. In programming terminology this is called 'deprecating'.
+Of course you cannot, or at least should not if you don't want a slew of script failures, just summarily chop the old code out of your codebase. Instead you want to mark it as being replaced by something else. In programming terminology this is called 'deprecating'.
 
 As usual, different languages have somewhat different ways to indicate deprecation but the general pattern is you annotate the code with a message indicating not only that the code is deprecated but what replaced it. Here it is in Java.
 

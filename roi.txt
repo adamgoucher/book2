@@ -8,9 +8,9 @@ To understand this, recall why we do automation in the first place. Computers ar
 
 This is a hard position to sell to people who are signing off on tooling budgets and are looking for a expenditure justifications. So here is formula to help satisfy their needs.
 
-Return on Investment = ((Average Tester Hourly cost * Hours manual testing allowed through automation ) - cost of automation) / cost of automation
+Return on Investment = ((Average Tester Hourly cost * Hours manual testing allowed through automation) - cost of automation) / cost of automation
 
-This is an extremely simplistic way of doing the calculation, but part of its beauty is in its simplicity in expressing the importance of testing time released by automation. And by what is not included in it. Specifically, the absence of 'number of bugs found' which at best is a misleading metric but one that commonly found in automation roi calculations. 
+This is an extremely simplistic way of doing the calculation, but part of its beauty is in its simplicity in expressing the importance of testing time released by automation. And by what is not included in it. Specifically, the absence of 'number of bugs found' which at best is a misleading metric but one that is commonly found in automation roi calculations. 
 
 Focusing the calculation on anything but the time freed up for manual testing is missing the true purpose entirely and one that will misrepresent the true return on investment for the automation effort.
 

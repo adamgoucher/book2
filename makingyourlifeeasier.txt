@@ -1,10 +1,10 @@
 Making Your Life Easier
 
-One of the sources of brittle scripts is that the application being scripted wasn't written in a way that makes it easy to script. Elements not having unique ids which lead to fragile structural locators for instance is the most common example.
+One of the sources of brittle scripts is that the application being scripted wasn't written in a way that makes it easy to script. Elements not having unique ids which lead to fragile structural locators, for instance, is the most common example.
 
-Should you just blindly accept the fact that your need to use a structural locator in your scripts when an id would be better for a particular situation? Of course not. Never blindly accept. Though too many teams seem too do just this as if they should be happy to get something at all.
+Should you just blindly accept the fact that you need to use a structural locator in your scripts when an id would be better for a particular situation? Of course not. Never blindly accept. Though too many teams seem to do just this as if they should be happy to get something at all.
 
-"Hello developer. I'm trying to automate this part of our application in order to find problems that might make you look bad if they escaped into production and am having a hard time in these handful of places. If you could add meaningful id attributes to them I'd be able to do thing a bit quicker and certainly more reliably. What do you say?"
+"Hello developer. I'm trying to automate this part of our application in order to find problems that might make you look bad if they escaped into production and am having a hard time in these handful of places. If you could add meaningful id attributes to them I'd be able to do things a bit quicker and certainly more reliably. What do you say?"
 
 It sounds kinda manipulative, but that is often all it takes to get quick automation hooks (like ids) put in place. But sometimes the source of the difficulty is much, much deeper. Gratuitous use of modals or iframes for instance. These components tend to be central to the development philosophy of the application.
 
@@ -12,10 +12,10 @@ For these it becomes an exercise in cost/benefit analysis.
 
 First, you pretty much have to understand why the thing you perceive as being a problem for you is in the system in the first place. Without that knowledge you have very little chance of coming up with a solution that correctly addresses the problem from a business perspective. Targeting the business is important. Switching one technological solution for another is not that difficult. The hard part is getting time carved out of the budget in order to do the switch. And that needs to be phrased as a business problem.
 
-Sidebar - Skunkworks - Yes, you could just go ahead either by yourself or with a coconspirator and just do a tech rework over a weekend. This might work well when creating an automated build but when changing the application in fundamental ways might not be the best plan.
+Sidebar - Skunkworks - Yes, you could just go ahead either by yourself or with a coconspirator and just do a tech rework over a weekend. This might work well when creating an automated build, but when changing the application in fundamental ways might not be the best plan.
 
-Once you know the origins of the problem you can come up with another way of solving the problem, that both continues to address the original reasons and does not have what is blocking you. If in your investigation you find something that does not cost too much additional effort to implement then you can propose it to the decision makers in terms of 'I am trying to do A, but B is preventing me [at all|somewhat]. If we replace B with C we get benefits A and D.'
+Once you know the origins of the problem you can come up with another way of solving the problem that both continues to address the original reasons and does not have what is blocking you. If in your investigation you find something that does not cost too much additional effort to implement, then you can propose it to the decision makers in terms of 'I am trying to do A, but B is preventing me [at all|somewhat]. If we replace B with C we get benefits A and D.'
 
-And then you see how well you were in presenting the problem and a solution. You might not be successful, but by going through the process you would undoubtably learned more about the application which will make you a better tester and script write as well as raised the profile of automation if only slightly in your organization.
+And then you see how well you were in presenting the problem and a solution. You might not be successful, but by going through the process you would undoubtably have learned more about the application, which will make you a better tester and script writer, as well as raised the profile of automation, if only slightly in your organization.
 
-The most important thing to remember is that even though a blocker might be technical in nature, the real source of the solution lies not in technology but in showing an alternate solution to the business that adds more value to them than the existing one.
+The most important thing to remember is that even though a blocker might be technical in nature, the real source of the solution lies not in technology, but in showing an alternate solution to the business that adds more value to them than the existing one.

@@ -12,7 +12,7 @@ The other form of input randomness is reactive. Reactive randomness is where you
 
 TODO: example
 
-Order randomization is also important to introduce into your automation. Recall the Pesticide Paradox; if you are executing the scripts in a specific order every time then you are likely setting yourself to get overrun by locusts.
+Order randomization is also important to introduce into your automation. Recall the Pesticide Paradox; if you are executing the scripts in a specific order every time then you are likely setting yourself up to get overrun by locusts.
 
 There are (at least) two side effects of running scripts in a scrambled order. First, it makes sure that they are not dependent on each other for successful execution or at the very least quickly identifies where the linkages exist. The second reason is that having scripts that can be run in any order is one of the first steps to being able to run scripts in parallel and in a distributed manner.
 

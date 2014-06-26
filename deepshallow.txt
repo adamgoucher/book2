@@ -1,14 +1,14 @@
 Deep and Shallow
 
-Generally speaking, a script can fall into broad categories; Deep and Shallow.
+Generally speaking, a script can fall into broad categories: Deep and Shallow.
 
-A Deep scripts, not surprisingly are ones that execute their purpose with a deep level of inquisition. It is not enough to check that the message on the screen was correct or that the page flow works as expected. Instead, the script will check the database for correctness, services were updated correctly, etc.
+Deep scripts, not surprisingly are ones that execute their purpose with a deep level of inquisition. It is not enough to check that the message on the screen was correct or that the page flow works as expected. Instead, the script will check the database for correctness, services were updated correctly, etc.
 
 Of course each of these types of Deep checks are separate scripts keeping them in the spirit of 'And' scripts.
 
-A Shallow script by comparison only does a quick skim across the surface of the application to ensure success. They will still have failing criteria in them, but they are far less rigorous than Deep ones. A Shallow script for instance might only check that message displayed the user is as expected.
+A Shallow script by comparison only does a quick skim across the surface of the application to ensure success. They will still have failing criteria in them, but they are far less rigorous than Deep ones. A Shallow script for instance might only check that message displayed to the user is as expected.
 
-Both are important, but a mature automation setup will overwhelmingly be Deep ones. This makes sense as one of the reasons for creating automation is to get a deep understanding of its current state of its functional characteristics. Ironically though, Deep tests are not the ones that should be constructed first. Shallow tests are almost always faster to create and will therefore provide information quicker. For this reason alone, Shallow tests should be considered before Deep ones.
+Both are important, but a mature automation setup will overwhelmingly consist of Deep ones. This makes sense as one of the reasons for creating automation is to get a deep understanding of the system's current state of its functional characteristics. Ironically though, Deep tests are not the ones that should be constructed first. Shallow tests are almost always faster to create and will therefore provide information quicker. For this reason alone, Shallow tests should be considered before Deep ones.
 
 Shallow scripts also tend to form the backbone of an application's suite of 'smoke' checks. Once those succeed then the Deep ones are performed.
 

@@ -10,4 +10,4 @@ Development -> Unit
 Test -> Functional, Assistant
 Operations -> Build, Deployment
 
-So you see, the answer really is 'it depends'. Identifying the internal automation champion, automation goals, and skill sets of available scripters with go a long way in figuring out who should 'own' the scripts in your organization. Don't make the mistake of assuming that the 'Test' team is who should own the functional automation just because it traditionally always has.
+So you see, the answer really is 'it depends'. Identifying the internal automation champion, automation goals, and skill sets of available scripters will go a long way in figuring out who should 'own' the scripts in your organization. Don't make the mistake of assuming that the 'Test' team is who should own the functional automation just because it traditionally always has.

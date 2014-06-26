@@ -23,8 +23,8 @@ That script does the the following.
 
 But I wouldn't consider this really understanding what is going on. This is general knowledge that is available on the front of the Selenium webpage. What you want to know is /how/ the browser is started. How does it locate it? What flags does it set? How can you tune them? Once you have that level of detail in your head, then you really understand.
 
-What this does not mean though is that you need to know every nook and cranny of the framework(s) you are using andy more than the young Jedi crafting her first lightsaber [likely] needed to understand power unit circuitry.
+What this does not mean though is that you need to know every nook and cranny of the framework(s) you are using any more than the young Jedi crafting her first lightsaber [likely] needed to understand power unit circuitry.
 
 How does one achieve this understanding? To extend the Star Wars theme a little further, the easiest way is to 'Use the Source'. Understanding is certainly easier when you have the source code for the automation tool/framework in front of you. Without it you will be stuck with whatever level of understanding the automation vendor deems you should have.
 
-Barring access to the source code, another tact is to create layers of abstraction between your code and the vendor code to increase the footprint of your understanding and isolate that which you don't.
+Barring access to the source code, another tactic is to create layers of abstraction between your code and the vendor code to increase the footprint of your understanding and isolate that which you don't.

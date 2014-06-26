@@ -1,10 +1,10 @@
 Magic
 
-Arthur C. Clarke's third law of prediction is that 'Any sufficiently advanced technology is indistinguishable from magic' and certainly applies to automation. Magic, in the hands of a professional causes confusion and cries of 'how did they do that?'. Automation should not have the same effect. Even if the it does the equivalent of walking through the great wall of china, there needs to be a step-by-step explanation of how the feat was accomplished.
+Arthur C. Clarke's third law of prediction is that 'Any sufficiently advanced technology is indistinguishable from magic' and certainly applies to automation. Magic, in the hands of a professional causes confusion and cries of 'how did they do that?'. Automation should not have the same effect. Even if the it does the equivalent of walking through the Great Wall of China, there needs to be a step-by-step explanation of how the feat was accomplished.
 
 Areas of magic are something that should be be addressed as soon as they are discovered. Every automation implementation has its magic hidden in different places, but two of the largest 'usual suspects' are the IDE and the build/run environment.
 
-The maturation of IDEs in the last 15 years is a double-edged sword for automation (and programming in general). On one hand it has made it easier to be [more] productive faster by hiding the details but on the other hand the details are hidden and its no by chance that the expression is 'the devil is in the details'. Why does your automation work inside the IDE and not out? Likely it is helping you out by providing some magic for you. Eclipse is somewhat notorious in this regard around the classpath. Like document templates, a full featured IDE like Eclipse should be avoided when starting to learn about automation.
+The maturation of IDEs in the last 15 years is a double-edged sword for automation (and programming in general). On one hand it has made it easier to be [more] productive faster by hiding the details, but on the other hand the details are hidden, and it's not by chance that the expression is 'the devil is in the details'. Why does your automation work inside the IDE and not out? Likely it is helping you out by providing some magic for you. Eclipse is somewhat notorious in this regard around the classpath. Like document templates, a full featured IDE like Eclipse should be avoided when starting to learn about automation.
 
 The obvious reason for this is it forces you to do all the in-project wiring yourself but the second reason is even more important. Without the assistance of command-completion you end up having to think about
 
@@ -16,6 +16,6 @@ every
 
 line that you type. Now you end up with the code you envisioned rather than the one the tool thought you should have. When starting out, diversions of opinion between the tool and you will often result in the tool being correct but don't take its word at face value without first learning why it thought that. By understanding the differences between models you will create better automation down the road.
 
-How the automation is built and run is also another area of potential magic. Can you explain to someone else how Maven works? How about the project's Rakefile? If not, you owe it to yourself to spend some time figuring out. There is all sorts of things that affect automation in there. Including bugs.
+How the automation is built and run is also another area of potential magic. Can you explain to someone else how Maven works? How about the project's Rakefile? If not, you owe it to yourself to spend some time figuring it out. There is all sorts of things that affect automation in there. Including bugs.
 
-Magic has an annoying characteristic in being in the eye of the beholder so something that is not magic to you could be to the new member of your team.
+Magic has an annoying characteristic in being in the eye of the beholder, so something that is not magic to you could be to the new member of your team.
